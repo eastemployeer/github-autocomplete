@@ -52,5 +52,5 @@ npm run test:unit
 
 5. Run e2e tests:
 ```bash 
-npm run test:e2
+npm run test:e2e
 ```

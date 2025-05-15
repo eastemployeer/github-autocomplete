@@ -1,6 +1,4 @@
-// GithubAutocomplete.test.tsx
 import { render, screen, fireEvent } from '@testing-library/react';
-import React from 'react';
 import GithubAutocomplete from './GithubAutocomplete';
 
 describe('GithubAutocomplete', () => {

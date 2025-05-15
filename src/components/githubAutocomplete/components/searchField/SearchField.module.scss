@@ -1,0 +1,34 @@
+.SearchField {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid var(--border);
+
+    &:has(.searchInput:focus-visible) {
+        border-color: var(--border-focus);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .searchIcon {
+        color: var(--border);
+        cursor: pointer;
+    }
+
+    .searchInput {
+        font-size: 1rem;
+        color: var(--primary);
+        flex: 1;
+        border: none;
+        outline: none;
+    }
+
+    .clearButton {
+        @extend .searchIcon;
+        border: 0;
+        background-color: transparent;
+    }
+}

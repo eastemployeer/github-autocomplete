@@ -1,0 +1,30 @@
+.SearchResultsItem {
+    &:hover {
+        background-color: var(--background-hover);
+    }
+
+    &.active {
+        background-color: var(--background-hover);
+    }
+
+    .metadataContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+
+        .avatar {
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 0.75rem;
+        }
+
+        .fetchTypeIcon {
+            margin-left: auto;
+            padding-left: 0.25rem;
+        }
+    }
+}

@@ -1,40 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# GitHub Autocomplete
 
-First, run the development server:
+Custom-built autocomplete component for searching GitHub repositories and users. This project is built without any third-party UI libraries (excluding icons ;)) — only plain HTML elements and styles — and provides a smooth and accessible user experience with keyboard navigation and scroll support.
+
+## ✨ Features
+
+- 🔎 Search GitHub **repositories** and **users** via the GitHub REST API.
+- ⌨️ Keyboard navigation using **ArrowUp**, **ArrowDown**, and **Enter**.
+- 📜 Scroll support for navigating long lists of results.
+- 🔤 Results are sorted **alphabetically** by name.
+- 🕒 Debounced API calls that start searching after typing at least **3 characters**.
+- ❌ Displays custom error messages for API errors (e.g., rate limits).
+- 💡 No usage of UI component libraries — **fully custom** UI.
+- 🔐 Supports clean and isolated **SCSS** styling.
+
+## 🧰 Tech Stack
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/) (since CRA is dead and I'm using Next.js on daily basis)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SCSS](https://sass-lang.com/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Cypress](https://www.cypress.io/) (E2E testing)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/github-autocomplete.git
+cd github-autocomplete
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+2.  Start the application using Docker Compose:
+```bash 
+docker-compose up -d
+```
+3. Visit `http://localhost:3000` in your browser.

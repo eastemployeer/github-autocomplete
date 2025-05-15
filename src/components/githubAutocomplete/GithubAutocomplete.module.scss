@@ -1,0 +1,24 @@
+.GithubAutocomplete {
+  width: 30rem;
+
+  .searchResultsContainer {
+    position: relative;
+    width: 100%;
+    visibility: hidden;
+
+    &.visible {
+      visibility: visible;
+    }
+  }
+
+  .searchResults {
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border: 1px solid var(--border);
+    border-top: 0;
+    padding: 0.5rem;
+    width: 100%;
+  }
+}

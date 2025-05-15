@@ -1,0 +1,13 @@
+.ErrorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+
+  .errorIcon {
+    color: red;
+  }
+}

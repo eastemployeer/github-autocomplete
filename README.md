@@ -44,3 +44,13 @@ cd github-autocomplete
 docker-compose up -d
 ```
 3. Visit `http://localhost:3000` in your browser.
+
+4. Run unit tests:
+```bash 
+npm run test:unit
+```
+
+5. Run e2e tests:
+```bash 
+npm run test:e2
+```

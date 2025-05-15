@@ -3,6 +3,8 @@
 
 Custom-built autocomplete component for searching GitHub repositories and users. This project is built without any third-party UI libraries (excluding icons ;)) — only plain HTML elements and styles — and provides a smooth and accessible user experience with keyboard navigation and scroll support.
 
+Live demo: [GithubAutocomplete](https://github-autocomplete-self.vercel.app/)
+
 ## ✨ Features
 
 - 🔎 Search GitHub **repositories** and **users** via the GitHub REST API.

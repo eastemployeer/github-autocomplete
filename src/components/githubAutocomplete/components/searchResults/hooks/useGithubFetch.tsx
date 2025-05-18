@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { isAxiosError } from "axios";
 import { GithubFetchType, GithubSearchRequest, GithubSearchResponse } from "./types/useGithubFetch";
 import requestJSON from "@/helpers/requestJSON";
 import useAsyncCallback from "@/hooks/useAsyncCallback";
 import { httpStatusErrorMessages } from "@/components/githubAutocomplete/utils/errors";
+import { isAxiosErrorWithResponse } from "@/helpers/axiosGuard";
 
 
 interface GithubFetchOptions<T> {
@@ -23,9 +25,11 @@ export default function useGithubFetch<T extends GithubFetchType>(options: Githu
       });
       setData(response);
       setError(null);
-    } catch(err: any) {
-      if("cancelNotify" in (err as any)) (err as any).cancelNotify();
-      setError(httpStatusErrorMessages[err.response?.status] || httpStatusErrorMessages[500]);
+    } catch(err) {
+      if(isAxiosErrorWithResponse(err)) {
+        if("cancelNotify" in (err as any)) (err as any).cancelNotify();
+        setError(httpStatusErrorMessages[err.response?.status] || httpStatusErrorMessages[500]);
+      }
     }
   }, [options.search.q]);
 

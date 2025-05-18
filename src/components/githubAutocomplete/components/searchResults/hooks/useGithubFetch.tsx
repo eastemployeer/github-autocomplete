@@ -28,7 +28,7 @@ export default function useGithubFetch<T extends GithubFetchType>(options: Githu
     } catch(err) {
       if(isAxiosErrorWithResponse(err)) {
         if("cancelNotify" in (err as any)) (err as any).cancelNotify();
-        setError(httpStatusErrorMessages[err.response?.status] || httpStatusErrorMessages[500]);
+        setError(httpStatusErrorMessages[err.response.status] || httpStatusErrorMessages[500]);
       }
     }
   }, [options.search.q]);
